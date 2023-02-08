@@ -1,0 +1,51 @@
+---
+title: "STAT-223: Chapter 12 Homework"
+author: "Patrick Harvey"
+date: "`r Sys.Date()`"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(shiny)
+```
+### Question 1:
+
+A sample of 200 was collected with 5 variables. Principal component analysis was performed using the correlation matrix, \mathbf{R}, incorrectly and the first two principal components were plotted.
+
+For each plot below, describe what in the plot is wrong and why it shouldn’t be possible if PCA was done correctly. Each plot is a separate example and the answers don’t depend on the other plots shown.
+
+#### 1.a.: 
+#### 1.b.:
+#### 1.c.:
+### Question 2:
+The file ```telescope.csv``` has 10 measurements on ellipses created by gamma particles in the atmosphere collected by a gamma telescope. The variables are:
+```{r echo = FALSE, results = 'asis'}
+library(knitr)
+
+tab = data.frame(c(
+'Length','Width','Size','Conc1','Conc2','Asym','Long','Trans','Alpha','Dist'), c('Length of the ellipse','Width of the ellipse','Sum of all pixels in the image created','Ratio of the sum of the two highest pixels over size','Ratio of the highest pixel over size','Distance from highest pixel to center','Third moment along major axis','Third moment along minor axis','Angle of major axis','Distance from origin to center of ellipse'))
+colnames(tab) <- rbind('Variable',   'Description')
+kable(tab)
+```
+#### 2.a.: Calculate the covariance matrix. Should the covariance matrix or correlation matrix be used for PCA? Briefly explain your answer.
+#### 2.b.: 
+#### 2.c.: 
+
+```
+STAT 223: Chapter 12 Homework
+	Create a correlation plot (make sure to include it in your solutions). Do any of the variables only have low correlations with the other 9 variables? If so, which ones?
+
+	Regardless of your answer in a), use the correlation matrix to perform PCA. Display the eigenvalues of all 10 PCs.
+
+	Create a scree plot. How many PCs would you recommend? What percent of the total variance do those PCs retain? Is that a high enough percentage?
+
+	How many PCs do you recommend? Briefly justify your answer.
+
+	Display the eigenvectors for the PCs you plan on retaining in part e). Do any of them have an interpretation regarding the original variables? If so, what is(are) the interpretations(s)?
+
+	Create plots for the 1st and 2nd PCs and the 1st and 3rd PCs. For both plots, describe any important results displayed in the graph, if any exist.
+
+	Do there appear to be linear dependencies in the original 10 variables? If yes, how many, and what are the combination of variables that form the linear dependencies?
+```
